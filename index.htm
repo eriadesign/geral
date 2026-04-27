@@ -4,15 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUVP Header</title>
     
-    <!-- Google Fonts: Anek Latin -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400&display=swap" rel="stylesheet">
     
-    <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -43,16 +40,12 @@
 </head>
 <body class="bg-gray-50 font-sans font-normal text-gray-900 min-h-screen flex flex-col">
 
-    <!-- Sidebar Overlay -->
     <div id="sidebar-overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-30 opacity-0 pointer-events-none transition-opacity duration-300"></div>
 
-    <!-- Sidebar (Desliza por trás do header: z-40 vs z-50 do header, largura reduzida para w-64) -->
-    <aside id="sidebar" class="fixed top-0 left-0 h-screen w-64 bg-white shadow-2xl z-40 transform -translate-x-full transition-transform duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col">
+    <aside id="sidebar" class="fixed top-0 left-0 h-[100dvh] w-64 bg-white shadow-2xl z-40 transform -translate-x-full transition-transform duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col">
         
-        <!-- Wrapper rolável -->
         <div class="flex-1 overflow-y-auto">
             
-            <!-- CONTEÚDO DESKTOP (Oculto no Mobile) -->
             <div class="hidden lg:flex flex-col gap-1 p-4">
                 <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-black rounded-xl transition-colors">
                     <i class="ph ph-house text-xl"></i>
@@ -84,7 +77,6 @@
                 </a>
             </div>
 
-            <!-- CONTEÚDO MOBILE (Substitui o Desktop em telas pequenas) -->
             <div class="flex lg:hidden flex-col gap-1 p-4">
                 <a href="#" class="flex items-center px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-auvp-green rounded-xl transition-colors">
                     <span class="text-base font-medium">Minha AUVP</span>
@@ -95,47 +87,44 @@
                     <span class="text-base font-medium">Live</span>
                 </a>
 
-                <!-- Dropdown Mobile: Estude com AUVP -->
                 <div class="flex flex-col">
                     <button onclick="toggleAccordion('mobile-estude')" class="w-full flex items-center justify-between px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-auvp-green rounded-xl transition-colors outline-none">
                         <span class="text-base font-medium">Estude com AUVP</span>
                         <i id="mobile-estude-icon" class="ph ph-caret-down transition-transform duration-300"></i>
                     </button>
-                    <div id="mobile-estude" class="hidden flex-col pl-8 py-2 gap-4">
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Escola</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Comunidade</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">AUVP Pro</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">AUVP Agro</a>
+                    <div id="mobile-estude" class="hidden flex-col pl-8 pr-4 py-4 gap-4 bg-gray-50 rounded-xl mt-1">
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Escola</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Comunidade</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">AUVP Pro</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">AUVP Agro</a>
                     </div>
                 </div>
 
-                <!-- Dropdown Mobile: Ferramentas -->
                 <div class="flex flex-col">
                     <button onclick="toggleAccordion('mobile-ferramentas')" class="w-full flex items-center justify-between px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-auvp-green rounded-xl transition-colors outline-none">
                         <span class="text-base font-medium">Ferramentas</span>
                         <i id="mobile-ferramentas-icon" class="ph ph-caret-down transition-transform duration-300"></i>
                     </button>
-                    <div id="mobile-ferramentas" class="hidden flex-col pl-8 py-2 gap-4">
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Analítica</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Finanças</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Diagrama</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">PIAR</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Dicionário de mercado</a>
+                    <div id="mobile-ferramentas" class="hidden flex-col pl-8 pr-4 py-4 gap-4 bg-gray-50 rounded-xl mt-1">
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Analítica</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Finanças</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Diagrama</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">PIAR</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Dicionário de mercado</a>
                     </div>
                 </div>
 
-                <!-- Dropdown Mobile: Soluções financeiras -->
                 <div class="flex flex-col">
                     <button onclick="toggleAccordion('mobile-solucoes')" class="w-full flex items-center justify-between px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-auvp-green rounded-xl transition-colors outline-none">
                         <span class="text-base font-medium">Soluções financeiras</span>
                         <i id="mobile-solucoes-icon" class="ph ph-caret-down transition-transform duration-300"></i>
                     </button>
-                    <div id="mobile-solucoes" class="hidden flex-col pl-8 py-2 gap-4">
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Consultoria</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Crédito</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Câmbio</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Wealth</a>
-                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-sm">Seguros</a>
+                    <div id="mobile-solucoes" class="hidden flex-col pl-8 pr-4 py-4 gap-4 bg-gray-50 rounded-xl mt-1">
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Consultoria</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Crédito</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Câmbio</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Wealth</a>
+                        <a href="#" class="font-medium text-gray-600 hover:text-auvp-green text-base">Seguros</a>
                     </div>
                 </div>
 
@@ -146,15 +135,12 @@
 
         </div>
 
-        <!-- Footer Sidebar: Tema e Sair (Visível em ambas as versões) -->
-        <div class="p-4 mb-4 border-t border-gray-100 flex flex-col gap-2 pt-4">
-            <!-- Modo Escuro -->
+        <div class="p-4 pb-6 border-t border-gray-100 flex flex-col gap-2 pt-4 bg-white">
             <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-900 hover:bg-gray-50 hover:text-black rounded-xl transition-colors">
                 <i class="ph ph-moon text-xl"></i>
                 <span class="text-base font-medium">Modo escuro</span>
             </a>
             
-            <!-- Sair -->
             <a href="#" class="flex items-center gap-4 px-4 py-3 text-gray-900 hover:bg-red-50 hover:text-red-600 rounded-xl transition-colors group">
                 <i class="ph ph-sign-out text-xl group-hover:text-red-600 transition-colors"></i>
                 <span class="text-base font-medium">Sair</span>
@@ -162,28 +148,23 @@
         </div>
     </aside>
 
-    <!-- Header Component (bg-white garante que o Dropdown deslize de trás dele) -->
     <header id="main-header" class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
         
-        <!-- Top Bar -->
         <div class="flex items-center justify-between px-4 md:px-8 py-4 border-b border-gray-100">
-            <!-- Menu -->
             <div id="menu-btn" class="flex items-center gap-3 cursor-pointer w-1/3">
                 <i class="ph ph-list text-2xl text-gray-900"></i>
                 <span class="text-base hidden sm:inline-block text-gray-900">Menu</span>
             </div>
 
-            <!-- Logo -->
             <div class="flex items-center justify-center cursor-pointer select-none w-1/3">
                 <img src="https://raw.githubusercontent.com/eriadesign/geral/main/AUVP%20-%20HORIZONTAL%20PRETA.png" alt="AUVP" class="h-8 md:h-12 object-contain">
             </div>
 
-            <!-- User Actions -->
             <div class="flex items-center justify-end gap-2 w-1/3">
-                <button class="hidden sm:flex items-center justify-center" aria-label="Notificações">
+                <button class="flex items-center justify-center" aria-label="Notificações">
                     <i class="ph ph-bell text-xl text-gray-900"></i>
                 </button>
-                <button class="hidden sm:flex items-center justify-center" aria-label="Recompensas">
+                <button class="flex items-center justify-center" aria-label="Recompensas">
                     <i class="ph ph-gift text-xl text-gray-900"></i>
                 </button>
                 <button class="flex items-center gap-2 bg-gray-100 px-3 py-1.5 md:px-0 md:py-0 md:bg-transparent rounded-full md:rounded-none">
@@ -193,9 +174,7 @@
             </div>
         </div>
 
-        <!-- Navigation Bar (Oculta no mobile com "hidden lg:block") -->
         <nav class="hidden lg:block w-full bg-white relative z-40">
-            <!-- Container com altura fixa (h-14) para garantir que não existam vãos que causem salto no hover -->
             <div class="w-full max-w-[800px] mx-auto px-4 md:px-0 flex items-center justify-between h-14 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal">
                 
                 <a href="#" class="text-gray-900 hover:text-auvp-green transition-colors text-base h-full flex items-center">Minha AUVP</a>
@@ -205,21 +184,17 @@
                     Live
                 </a>
                 
-                <!-- Estude com AUVP com Dropdown Full Screen -->
                 <div class="group static h-full flex items-center">
                     <button class="flex items-center gap-1 outline-none text-gray-900 group-hover:text-auvp-green transition-colors h-full relative z-50 text-base">
                         Estude com AUVP
                         <i class="ph ph-caret-down transition-transform duration-300 group-hover:-rotate-180"></i>
                     </button>
                     
-                    <!-- Dropdown Menu: Clip-path garante a ilusão de sair da linha do header, sem fade e sem salto na saída -->
                     <div class="absolute left-0 top-full w-full pointer-events-none z-30" style="clip-path: inset(0px 0px -500px 0px);">
                         <div class="w-full bg-white border-t border-gray-100 transition-transform duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] -translate-y-[101%] group-hover:translate-y-0 pointer-events-auto">
                             
-                            <!-- Container interno alinhado perfeitamente com o menu -->
                             <div class="w-full max-w-[800px] mx-auto py-10 flex gap-12 justify-start">
                                 
-                                <!-- Lado Esquerdo: Imagem e Texto -->
                                 <div class="w-[340px] flex flex-col">
                                     <h3 class="font-bold text-gray-900 mb-4 text-left text-base">Estude com AUVP</h3>
                                     <img src="https://raw.githubusercontent.com/eriadesign/geral/main/DSC09947.jpg" alt="Raul Sena AUVP Estúdio" class="w-full h-[110px] object-cover rounded-lg mb-4 border border-gray-100">
@@ -228,7 +203,6 @@
                                     </p>
                                 </div>
 
-                                <!-- Lado Direito: Links text-base em cor sólida -->
                                 <div class="w-48 flex flex-col justify-start gap-5 pt-10 text-left">
                                     <a href="#" class="font-medium text-gray-900 text-base">Escola</a>
                                     <a href="#" class="font-medium text-gray-900 text-base">Comunidade</a>
@@ -240,21 +214,17 @@
                     </div>
                 </div>
                 
-                <!-- Ferramentas com Dropdown Full Screen -->
                 <div class="group static h-full flex items-center">
                     <button class="flex items-center gap-1 outline-none text-gray-900 group-hover:text-auvp-green transition-colors text-base h-full relative z-50">
                         Ferramentas
                         <i class="ph ph-caret-down transition-transform duration-300 group-hover:-rotate-180"></i>
                     </button>
                     
-                    <!-- Dropdown Menu Ferramentas -->
                     <div class="absolute left-0 top-full w-full pointer-events-none z-30" style="clip-path: inset(0px 0px -500px 0px);">
                         <div class="w-full bg-white border-t border-gray-100 transition-transform duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] -translate-y-[101%] group-hover:translate-y-0 pointer-events-auto">
                             
-                            <!-- Container interno padronizado -->
                             <div class="w-full max-w-[800px] mx-auto py-10 flex gap-12 justify-start">
                                 
-                                <!-- Lado Esquerdo: Imagem e Texto -->
                                 <div class="w-[340px] flex flex-col">
                                     <h3 class="font-bold text-gray-900 mb-4 text-left text-base">Ferramentas</h3>
                                     <div class="w-full h-[110px] rounded-lg mb-4 border border-gray-100 overflow-hidden">
@@ -265,7 +235,6 @@
                                     </p>
                                 </div>
 
-                                <!-- Lado Direito: Links -->
                                 <div class="w-48 flex flex-col justify-start gap-5 pt-10 text-left">
                                     <a href="#" class="font-medium text-gray-900 text-base">Analítica</a>
                                     <a href="#" class="font-medium text-gray-900 text-base">Finanças</a>
@@ -278,21 +247,17 @@
                     </div>
                 </div>
                 
-                <!-- Soluções financeiras com Dropdown Full Screen -->
                 <div class="group static h-full flex items-center">
                     <button class="flex items-center gap-1 outline-none text-gray-900 group-hover:text-auvp-green transition-colors text-base h-full relative z-50">
                         Soluções financeiras
                         <i class="ph ph-caret-down transition-transform duration-300 group-hover:-rotate-180"></i>
                     </button>
                     
-                    <!-- Dropdown Menu Soluções financeiras -->
                     <div class="absolute left-0 top-full w-full pointer-events-none z-30" style="clip-path: inset(0px 0px -500px 0px);">
                         <div class="w-full bg-white border-t border-gray-100 transition-transform duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] -translate-y-[101%] group-hover:translate-y-0 pointer-events-auto">
                             
-                            <!-- Container interno padronizado -->
                             <div class="w-full max-w-[800px] mx-auto py-10 flex gap-12 justify-start">
                                 
-                                <!-- Lado Esquerdo: Imagem e Texto -->
                                 <div class="w-[340px] flex flex-col">
                                     <h3 class="font-bold text-gray-900 mb-4 text-left text-base">Soluções financeiras</h3>
                                     <div class="w-full h-[110px] rounded-lg mb-4 border border-gray-100 overflow-hidden">
@@ -303,7 +268,6 @@
                                     </p>
                                 </div>
 
-                                <!-- Lado Direito: Links -->
                                 <div class="w-48 flex flex-col justify-start gap-5 pt-10 text-left">
                                     <a href="#" class="font-medium text-gray-900 text-base">Consultoria</a>
                                     <a href="#" class="font-medium text-gray-900 text-base">Crédito</a>
@@ -321,55 +285,24 @@
         </nav>
     </header>
 
-    <!-- Main Content Area -->
     <main class="flex-1 w-full relative z-0">
         <div class="max-w-[800px] mx-auto px-4 md:px-0 py-12 flex flex-col gap-12">
             
-            <!-- Secção 1 (Existente) -->
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <h1 class="text-3xl font-bold text-gray-800 mb-4">Área principal do site</h1>
                 <p class="text-base text-gray-600 leading-relaxed">
-                    Problema de salto (jitter) resolvido! Removemos a opacidade (sem efeito de fade) e aplicamos um <code>clip-path</code> inteligente acompanhado da altura completa dos elementos da <code>nav</code>. O menu agora desliza suavemente tanto na abertura quanto no fechamento como um bloco fixo escondido pela máscara do próprio cabeçalho.
+                    Testando no celular, você notará que o "Sino" e "Presente" agora ficam ali fixos no canto superior direito. Ao abrir a barra lateral (Sidebar), as opções principais do cabeçalho assumem o lugar, com uma Sanfona (Dropdown) em 16px num fundo acinzentado super moderno. O problema de corte do botão "Sair" na base do celular também está resolvido!
                 </p>
             </div>
 
-            <!-- Secção 2 (Novo - Fundo Escuro para testar o desfoque) -->
-            <div class="bg-gray-900 p-12 rounded-3xl shadow-lg flex flex-col items-center text-center">
-                <h2 class="text-3xl font-bold text-white mb-6">A revolução da sua vida financeira</h2>
-                <p class="text-lg text-gray-300 max-w-2xl leading-relaxed mb-8">
-                    Role a página para cima e para baixo e abra o menu para ver o efeito de vidro fosco (glassmorphism) a funcionar perfeitamente sobre os elementos escuros e coloridos do site.
-                </p>
-                <div class="w-full h-64 bg-gray-800 rounded-xl border border-gray-700 flex items-center justify-center">
-                    <span class="text-gray-500 font-medium">Simulação de Gráfico ou Vídeo</span>
-                </div>
-            </div>
-
-            <!-- Secção 3 (Novo - Cards Claros) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 h-80 flex flex-col justify-center hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Módulo 1: Fundamentos</h3>
-                    <p class="text-gray-600 leading-relaxed">Aprenda a base sólida para construir o seu património a longo prazo com total segurança e previsibilidade.</p>
-                </div>
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 h-80 flex flex-col justify-center hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Módulo 2: Renda Variável</h3>
-                    <p class="text-gray-600 leading-relaxed">Desmistifique a bolsa de valores e descubra como escolher e investir nas melhores empresas do mercado.</p>
-                </div>
-            </div>
-
-            <!-- Secção 4 (Novo - Bloco final para estender o scroll) -->
             <div class="h-96 rounded-3xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center bg-gray-50/50">
                 <i class="ph ph-arrow-down text-4xl text-gray-300 mb-4 animate-bounce"></i>
-                <p class="text-gray-400 font-medium text-lg">Continue a rolar para testar o cabeçalho fixo no topo...</p>
-            </div>
-            
-            <div class="h-64 rounded-3xl bg-white border border-gray-100 flex items-center justify-center shadow-sm">
-                <p class="text-gray-400 font-medium">Fim da página de testes.</p>
+                <p class="text-gray-400 font-medium text-lg text-center px-4">Continue a rolar para testar o cabeçalho fixo no topo...</p>
             </div>
 
         </div>
     </main>
 
-    <!-- Script de Funcionalidade da Sidebar e Sanfona -->
     <script>
         // Função para Sanfona Mobile
         window.toggleAccordion = (id) => {
@@ -396,12 +329,10 @@
             let isOpen = false;
 
             // Função para garantir que a sidebar comece exatamente abaixo do header visualmente
-            // adicionando um padding top igual à altura total do header (evitando que suma atrás dele)
             const syncSidebarPadding = () => {
                 sidebar.style.paddingTop = `${header.offsetHeight}px`;
             };
             
-            // Sincroniza no carregamento da página e ao redimensionar a tela
             syncSidebarPadding();
             window.addEventListener('resize', syncSidebarPadding);
 
@@ -418,9 +349,8 @@
                 }
             };
 
-            // Eventos de clique para abrir/fechar
             menuBtn.addEventListener('click', toggleSidebar);
-            overlay.addEventListener('click', toggleSidebar); // Fecha ao clicar na área escura
+            overlay.addEventListener('click', toggleSidebar);
         });
     </script>
 </body>
