@@ -218,11 +218,12 @@
                                     </p>
                                 </div>
 
-                                <div class="w-48 flex flex-col justify-start gap-5 pt-10 text-left">
-                                    <a href="#" class="font-medium text-gray-900 text-base">Escola</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">Comunidade</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">AUVP Pro</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">AUVP Agro</a>
+                                <!-- Adicionado group/subnav aos links e logica de cinza/verde aos itens -->
+                                <div class="group/subnav w-48 flex flex-col justify-start gap-5 pt-10 text-left">
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Escola</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Comunidade</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">AUVP Pro</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">AUVP Agro</a>
                                 </div>
                             </div>
                         </div>
@@ -250,12 +251,13 @@
                                     </p>
                                 </div>
 
-                                <div class="w-48 flex flex-col justify-start gap-5 pt-10 text-left">
-                                    <a href="#" class="font-medium text-gray-900 text-base">Analítica</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">Finanças</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">Diagrama</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">PIAR</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">Dicionário de mercado</a>
+                                <!-- Adicionado group/subnav aos links e logica de cinza/verde aos itens -->
+                                <div class="group/subnav w-48 flex flex-col justify-start gap-5 pt-10 text-left">
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Analítica</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Finanças</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Diagrama</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">PIAR</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Dicionário de mercado</a>
                                 </div>
                             </div>
                         </div>
@@ -283,12 +285,13 @@
                                     </p>
                                 </div>
 
-                                <div class="w-48 flex flex-col justify-start gap-5 pt-10 text-left">
-                                    <a href="#" class="font-medium text-gray-900 text-base">Consultoria</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">Crédito</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">Câmbio</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">Wealth</a>
-                                    <a href="#" class="font-medium text-gray-900 text-base">Seguros</a>
+                                <!-- Adicionado group/subnav aos links e logica de cinza/verde aos itens -->
+                                <div class="group/subnav w-48 flex flex-col justify-start gap-5 pt-10 text-left">
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Consultoria</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Crédito</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Câmbio</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Wealth</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Seguros</a>
                                 </div>
                             </div>
                         </div>
@@ -308,8 +311,7 @@
                 <h1 class="text-3xl font-bold text-gray-800 mb-4">Área principal do site</h1>
                 <p class="text-base text-gray-600 leading-relaxed">
                     Aqui pode testar todas as últimas correções:<br><br>
-                    <strong>1. Hover de Opacidade no Topo:</strong> Agora a opção "Minha AUVP", "Live" e "Suporte" ficam perfeitamente verdes sobrepondo o cinza quando recebem o cursor diretamente sobre elas, combinando com os menus suspensos.<br>
-                    <strong>2. Nova Logo:</strong> Aumentámos e fixámos a altura da logo para <code>h-14</code> (56px) para que fique muito mais perceptível, e travei ela nesse tamanho até mesmo em telemóveis.
+                    <strong>1. Hover Refinado nos Dropdowns:</strong> Ao passar o mouse nos itens das listas abertas (como Escola, Comunidade, etc.), agora todos os outros itens daquela lista ficam com a cor cinza, mantendo focado e verde apenas o item sob o cursor.<br>
                 </p>
             </div>
 
