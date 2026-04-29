@@ -188,16 +188,10 @@
         </div>
 
         <nav class="hidden lg:block w-full bg-white relative z-40">
-            <!-- group/nav implementa o efeito onde elementos ficam cinza (text-gray-400) quando a nav é hoverada -->
-            <div class="group/nav w-full max-w-[800px] mx-auto px-4 md:px-0 flex items-center justify-between h-14 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal">
+            <!-- Centralizado com gap-8 a gap-12 para aproximar os itens em vez de espalhá-los pelas bordas -->
+            <div class="group/nav w-full max-w-[800px] mx-auto px-4 md:px-0 flex items-center justify-center gap-8 lg:gap-12 h-14 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal">
                 
-                <!-- Corrigido hover para forçar o verde independentemente do grupo nas opções simples -->
                 <a href="#" class="group/item text-gray-900 group-hover/nav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base h-full flex items-center">Minha AUVP</a>
-                
-                <a href="#" class="group/item flex items-center gap-1.5 text-gray-900 group-hover/nav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base h-full">
-                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                    Live
-                </a>
                 
                 <div class="group/item group static h-full flex items-center transition-all duration-300">
                     <button class="flex items-center gap-1 outline-none text-gray-900 group-hover/nav:text-gray-400 group-hover/item:!text-auvp-green transition-colors h-full relative z-50 text-base">
@@ -218,8 +212,8 @@
                                     </p>
                                 </div>
 
-                                <!-- Adicionado group/subnav aos links e logica de cinza/verde aos itens -->
                                 <div class="group/subnav w-48 flex flex-col justify-start gap-5 pt-10 text-left">
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Live</a>
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Escola</a>
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Comunidade</a>
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">AUVP Pro</a>
@@ -251,7 +245,6 @@
                                     </p>
                                 </div>
 
-                                <!-- Adicionado group/subnav aos links e logica de cinza/verde aos itens -->
                                 <div class="group/subnav w-48 flex flex-col justify-start gap-5 pt-10 text-left">
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Analítica</a>
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Finanças</a>
@@ -285,7 +278,6 @@
                                     </p>
                                 </div>
 
-                                <!-- Adicionado group/subnav aos links e logica de cinza/verde aos itens -->
                                 <div class="group/subnav w-48 flex flex-col justify-start gap-5 pt-10 text-left">
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Consultoria</a>
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Crédito</a>
@@ -298,7 +290,6 @@
                     </div>
                 </div>
                 
-                <!-- Corrigido hover para forçar o verde independentemente do grupo nas opções simples -->
                 <a href="#" class="group/item text-gray-900 group-hover/nav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base h-full flex items-center">Suporte</a>
             </div>
         </nav>
@@ -311,7 +302,8 @@
                 <h1 class="text-3xl font-bold text-gray-800 mb-4">Área principal do site</h1>
                 <p class="text-base text-gray-600 leading-relaxed">
                     Aqui pode testar todas as últimas correções:<br><br>
-                    <strong>1. Hover Refinado nos Dropdowns:</strong> Ao passar o mouse nos itens das listas abertas (como Escola, Comunidade, etc.), agora todos os outros itens daquela lista ficam com a cor cinza, mantendo focado e verde apenas o item sob o cursor.<br>
+                    <strong>1. Categorias Agrupadas:</strong> Trocámos o alinhamento de espalhado (`justify-between`) para centralizado (`justify-center gap-10`), deixando as opções de navegação mais próximas e elegantes.<br>
+                    <strong>2. Remoção do "Live" Avulso:</strong> O item "Live" solitário foi removido da barra superior, mantendo-se apenas dentro do Dropdown correspondente.<br>
                 </p>
             </div>
 
