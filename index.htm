@@ -81,11 +81,6 @@
                 <a href="#" class="sidebar-option flex items-center px-4 py-3 text-gray-900 hover:text-[#008000] transition-colors">
                     <span class="text-base font-medium">Minha AUVP</span>
                 </a>
-                
-                <a href="#" class="sidebar-option flex items-center gap-2 px-4 py-3 text-gray-900 hover:text-[#008000] transition-colors">
-                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                    <span class="text-base font-medium">Live</span>
-                </a>
 
                 <div class="flex flex-col">
                     <button onclick="toggleAccordion('mobile-estude')" class="sidebar-option w-full flex items-center justify-between px-4 py-3 text-gray-900 hover:text-[#008000] transition-colors outline-none">
@@ -95,6 +90,7 @@
                     <div id="mobile-estude" class="hidden flex-col pl-6 pr-4 py-4 gap-2 bg-gray-50 rounded-xl mt-1">
                         <a href="#" class="sidebar-option font-medium text-gray-600 hover:text-[#008000] px-3 py-2 transition-colors text-base">Escola</a>
                         <a href="#" class="sidebar-option font-medium text-gray-600 hover:text-[#008000] px-3 py-2 transition-colors text-base">Comunidade</a>
+                        <a href="#" class="sidebar-option font-medium text-gray-600 hover:text-[#008000] px-3 py-2 transition-colors text-base">Live</a>
                         <a href="#" class="sidebar-option font-medium text-gray-600 hover:text-[#008000] px-3 py-2 transition-colors text-base">AUVP Pro</a>
                         <a href="#" class="sidebar-option font-medium text-gray-600 hover:text-[#008000] px-3 py-2 transition-colors text-base">AUVP Agro</a>
                     </div>
@@ -152,7 +148,6 @@
                 <span class="text-base hidden sm:inline-block text-gray-900">Menu</span>
             </div>
 
-            <!-- Alterado h-10 para h-14 para aumentar a logo, mantendo o tamanho fixo no mobile e desktop -->
             <div class="flex items-center justify-center cursor-pointer select-none w-1/3">
                 <img src="https://raw.githubusercontent.com/eriadesign/geral/main/AUVP%20-%20HORIZONTAL%20PRETA.png" alt="AUVP" class="h-14 object-contain">
             </div>
@@ -188,7 +183,6 @@
         </div>
 
         <nav class="hidden lg:block w-full bg-white relative z-40">
-            <!-- Centralizado com gap-8 a gap-12 para aproximar os itens em vez de espalhá-los pelas bordas -->
             <div class="group/nav w-full max-w-[800px] mx-auto px-4 md:px-0 flex items-center justify-center gap-8 lg:gap-12 h-14 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal">
                 
                 <a href="#" class="group/item text-gray-900 group-hover/nav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base h-full flex items-center">Minha AUVP</a>
@@ -213,9 +207,9 @@
                                 </div>
 
                                 <div class="group/subnav w-48 flex flex-col justify-start gap-5 pt-10 text-left">
-                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Live</a>
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Escola</a>
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Comunidade</a>
+                                    <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">Live</a>
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">AUVP Pro</a>
                                     <a href="#" class="font-medium text-gray-900 group-hover/subnav:text-gray-400 hover:!text-auvp-green transition-colors duration-300 text-base">AUVP Agro</a>
                                 </div>
@@ -302,8 +296,7 @@
                 <h1 class="text-3xl font-bold text-gray-800 mb-4">Área principal do site</h1>
                 <p class="text-base text-gray-600 leading-relaxed">
                     Aqui pode testar todas as últimas correções:<br><br>
-                    <strong>1. Categorias Agrupadas:</strong> Trocámos o alinhamento de espalhado (`justify-between`) para centralizado (`justify-center gap-10`), deixando as opções de navegação mais próximas e elegantes.<br>
-                    <strong>2. Remoção do "Live" Avulso:</strong> O item "Live" solitário foi removido da barra superior, mantendo-se apenas dentro do Dropdown correspondente.<br>
+                    <strong>1. Ordem Atualizada:</strong> O item "Live" foi perfeitamente realocado logo abaixo de "Comunidade", tanto no menu suspenso principal quanto na visualização mobile.<br>
                 </p>
             </div>
 
@@ -316,7 +309,6 @@
     </main>
 
     <script>
-        // Função para Sanfona Mobile
         window.toggleAccordion = (id) => {
             const content = document.getElementById(id);
             const icon = document.getElementById(`${id}-icon`);
@@ -332,10 +324,7 @@
             }
         };
 
-        // Scripts da Lógica Geral (Sidebar, Active Links e Profile)
         document.addEventListener('DOMContentLoaded', () => {
-            
-            // --- CONTROLE DA SIDEBAR VISUAL ---
             const menuBtn = document.getElementById('menu-btn');
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
@@ -365,26 +354,22 @@
             menuBtn.addEventListener('click', toggleSidebar);
             overlay.addEventListener('click', toggleSidebar);
 
-            // --- ESTADO ATIVO (#008000) DOS LINKS DA SIDEBAR ---
             const sidebarOptions = document.querySelectorAll('.sidebar-option');
             sidebarOptions.forEach(option => {
                 option.addEventListener('click', function() {
-                    // Remove a cor travada de todos os irmãos
                     sidebarOptions.forEach(opt => {
                         opt.classList.remove('!text-[#008000]');
                     });
-                    // Força a cor ativa no elemento recém clicado
                     this.classList.add('!text-[#008000]');
                 });
             });
 
-            // --- LÓGICA DO POPUP DE PERFIL E LOGOUT ---
             const profileBtn = document.getElementById('profile-btn');
             const profilePopup = document.getElementById('profile-popup');
             let profileOpen = false;
 
             profileBtn.addEventListener('click', (e) => {
-                e.stopPropagation(); // Previne que o clique vaze e feche instantaneamente
+                e.stopPropagation(); 
                 profileOpen = !profileOpen;
                 if (profileOpen) {
                     profilePopup.classList.remove('opacity-0', 'invisible', 'translate-y-2');
@@ -395,7 +380,6 @@
                 }
             });
 
-            // Fechar ao clicar em qualquer área externa ao Profile Box
             document.addEventListener('click', (e) => {
                 if (profileOpen && !profilePopup.contains(e.target)) {
                     profileOpen = false;
